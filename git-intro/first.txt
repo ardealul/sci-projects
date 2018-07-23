@@ -1,3 +1,5 @@
 am facut niste modificari
 altceva
 am facut niste modificari locale
+total alte modificari fata de local
+
