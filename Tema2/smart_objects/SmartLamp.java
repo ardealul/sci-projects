@@ -7,7 +7,9 @@ set color*/
 public class SmartLamp extends Host {
 	private int brightness;
 	private String color;
-
+/**
+ * daca dispozitivul e pornit, returneaza 5, altfel 0
+ */
 	@Override
 	public double getConsumption() {
 		if (isOn==true)
@@ -18,7 +20,11 @@ public class SmartLamp extends Host {
 	public int getBrightness() {
 		return brightness;
 	}
-
+/**
+ * Pentru a seta luminozitatea de la lampa, exista 3 reguli, sa fie mai mare sau egala cu 0 si mai mica sau egala cu 100
+ * si sa fie pornita lampa
+ * @param Primeste un brightness pe care noi il bagam si in functie de el seteaza luminozitatea
+ */
 	public void setBrightness(int brightness) {
 		if(brightness>=0 && brightness<=100&&isOn==true)
 		this.brightness = brightness;

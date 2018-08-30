@@ -10,7 +10,9 @@ import smart_objects.SmartLamp;
 import smart_objects.SmartThermostat;
 
 public class Menu {
-	
+	/**
+	 * Un meniu destul de urat si mare, dar nu stiu inca sa-l fac cat mai frumos :(
+	 */
 	public void menu() {
 		
 		Host array[]=new Host[3];
@@ -33,7 +35,7 @@ public class Menu {
 	    		System.out.println(array[0].toString());
 	    		System.out.println("Press one to turn the Lamp On or Off");
 	    		System.out.println("Press two to set Brightness");
-	    		System.out.println("Press three to set Color");
+	    		System.out.println("Press three to set Color, make sure the lamp is on");
 	    		int aleg = scanner.nextInt();
 	    		if (aleg==1) {
 	    		boolean state = array[0].getState();
@@ -46,7 +48,7 @@ public class Menu {
 	    			//this.menu();
 	    			}
 	    		}else if (aleg == 2) {
-	    			System.out.println("Enter the brightness, from 0 to 100");
+	    			System.out.println("Enter the brightness, from 0 to 100, make sure the lamp is on");
 	    			int brightness=scanner.nextInt();
 	    			((SmartLamp) array[0]).setBrightness(brightness);
 	    		System.out.println(array[0]);}
@@ -60,7 +62,7 @@ public class Menu {
 	  case 2:
 			System.out.println(array[1].toString());
     		System.out.println("Press one to turn the Thermostat On or Off");
-    		System.out.println("Press two to set Temperature");
+    		System.out.println("Press two to set Temperature, make sure the Thermostat is on");
     		int aleg1 = scanner.nextInt();
     		if (aleg1==1) {
     			boolean state = array[1].getState();
@@ -79,7 +81,7 @@ public class Menu {
 	   case 3:
 		   System.out.println(array[2].toString());
     		System.out.println("Press one to turn the Camera On or Off");
-    		System.out.println("Press two to start/stop filming");
+    		System.out.println("Press two to start/stop filming, make sure the camera is on");
     		int aleg2 = scanner.nextInt();
     		if (aleg2==1) {
     		boolean state = array[2].getState();

@@ -5,7 +5,9 @@ can set temperature*/
 
 public class SmartThermostat extends Host {
 	private int temperature;
-
+/**
+ * daca dispozitivul e pornit, returneaza 3, altfel 0
+ */
 	@Override
 	public double getConsumption() {
 		if (isOn==true)
@@ -16,7 +18,10 @@ public class SmartThermostat extends Host {
 	public int getTemperature() {
 		return temperature;
 	}
-
+/**
+ * Primeste o temperatura intre -20 si 29, daca nu e intre aceste valori, returneaza "temperatura nu e buna"
+ * @param temperature
+ */
 	public void setTemperature(int temperature) {
 		if(temperature>-20 && temperature<30) {
 		this.temperature = temperature;}

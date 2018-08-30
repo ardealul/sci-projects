@@ -4,7 +4,9 @@ can be turned on and off
 can start/stop filming*/
 public class SmartCam extends Host{
 	private boolean filming;
-
+/**
+ * Returneaza 10 daca e pornita si si filmeaza sau 5 daca doar e pornita
+ */
 	@Override
 	public double getConsumption() {
 		if(isOn==true&&filming==true)
